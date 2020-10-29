@@ -1,0 +1,92 @@
+{
+    // Place your snippets for rpgle here. Each snippet is defined under a snippet name and has a prefix, body and 
+    // description. The prefix is what is used to trigger the snippet and the body will be expanded and inserted. Possible variables are:
+    // $1, $2 for tab stops, $0 for the final cursor position, and ${1:label}, ${2:another} for placeholders. Placeholders with the 
+    // same ids are connected.
+    // Example:
+    "ControlOption": {
+        "prefix": "CTLOPT",
+        "body": "Ctl-Opt DftActGrp(*No) Option(*Srcstmt : *NodebugIO);$0",
+        "description": "Add Ctl-Opt at the beginnig of the code"
+    },
+    "DefineFSpec": {
+        "prefix": "DF",
+        "body": "Dcl-F $1;$0",
+        "description": "Define File in F Specs"
+    },
+    "DefineWorkstation": {
+        "prefix": "DW",
+        "body": "Dcl-F $1 \tWORKSTN;$0",
+        "description": "Define Display file"
+    },
+    "DefineDSpecCharacter": {
+        "prefix": "DC",
+        "body": "Dcl-S $1\t\tChar($2);$0",
+        "description": "Define Character field in D Specs"
+    },
+    "DefineDSpecVarCharacter": {
+        "prefix": "DV",
+        "body": "Dcl-S $1\t\tVarchar($2);$0",
+        "description": "Define Variable Character field in D Specs"
+    },
+    "DefineDSpecInteger": {
+        "prefix": "DI",
+        "body": "Dcl-S $1\t\tInt($2);$0",
+        "description": "Define Integer field in D Specs"
+    },
+    "DefineDSpecZoned": {
+        "prefix": "DZ",
+        "body": "Dcl-S $1\t\tZoned($2:$3);$0",
+        "description": "Define Zoned field in D Specs"
+    },
+    "DefinePGMDS": {
+        "prefix": "PSDS",
+        "body": "Dcl-DS *N  PSDS;\n\t#Prog       Char(10)     Pos(1);\n\t#JobName    Char(10)     Pos(244);\n\t#User       Char(10)     Pos(254);\n\t#JobNo      Zoned(6:0)   Pos(264);\nEnd-DS;$0",
+        "description": "Define Program Datastructure field in D Specs"
+    },
+    "DefineDataStructure": {
+        "prefix": "DS",
+        "body": "Dcl-DS $1;\n\t$0\nEnd-DS;",
+        "description": "Define Data Structure"
+    },
+    "DefineDataStructureQualified": {
+        "prefix": "DSQ",
+        "body": "Dcl-DS $1 \tQualified;\n\t$0 \nEnd-DS;",
+        "description": "Define Qualified Data Structure"
+    },
+    "Subroutine": {
+        "prefix": "BEGSR",
+        "body": "Begsr $1;$0\nEndsr;",
+        "description": "Create a subroutine"
+    },
+    "CommentDouble": {
+        "prefix": "CMT=",
+        "body": "//============================================================================*$0",
+        "description": "Add comment line with ="
+    },
+    "CommentSingle": {
+        "prefix": "CMT-",
+        "body": "//----------------------------------------------------------------------------*$0",
+        "description": "Add comment line with -"
+    },
+    "Do-While": {
+        "prefix": "DOW",
+        "body": "\tDow ${1:condition};\n\t$0\n\tEnddo;",
+        "description": "Dow Loop"
+    },
+    "Do-Until": {
+        "prefix": "DOU",
+        "body": "\tDou ${1:condition};\n\t$0\n\tEnddo;",
+        "description": "Dou Loop"
+    },
+    "if-endif": {
+        "prefix": "IFENDIF",
+        "body": "\tIf ${1:condition};\n\t$0\n\tEndif;",
+        "description": "If-Endif"
+    },
+    "if-else-endif": {
+        "prefix": "IFELSE",
+        "body": "\tIf ${1:condition};\n\t$0\n\tElse;\n\tEndif;",
+        "description": "If-Else-Endif"
+    }
+}
